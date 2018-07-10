@@ -9,32 +9,40 @@
     <welcome-file>default.htm</welcome-file>
     <welcome-file>default.jsp</welcome-file>
   </welcome-file-list>
+  
   <servlet>
-  	<servlet-name>testServerlet</servlet-name>
-  	<servlet-class>com.gt.serverlets.testServerlet</servlet-class>
-  	
-  	<init-param>
-		<param-name>auteur</param-name> 
-		<param-value>Coyote</param-value> 
-	</init-param>
-
-	<description>Ma première servlet de test.</description>
-
-	<load-on-startup>1</load-on-startup>
+    <description>Ma première servlet de test.</description>
+    <servlet-name>testServerlet</servlet-name>
+    <servlet-class>com.gt.serverlets.testServerlet</servlet-class>
+    <init-param>
+      <param-name>auteur</param-name>
+      <param-value>Coyote</param-value>
+    </init-param>
+    <load-on-startup>1</load-on-startup>
   </servlet>
   
   <servlet-mapping>
-	<servlet-name>testServerlet</servlet-name>
-	<url-pattern>/toto</url-pattern>
+    <servlet-name>testServerlet</servlet-name>
+    <url-pattern>/toto</url-pattern>
   </servlet-mapping>
   
   <servlet>
-	<servlet-name>GestionTestJDBC</servlet-name>
-	<servlet-class>bdd.GestionTestJDBC</servlet-class>
-</servlet>
-
-<servlet-mapping>
-	<servlet-name>GestionTestJDBC</servlet-name>
-	<url-pattern>/testjdbc</url-pattern>
-</servlet-mapping>
+    <servlet-name>GestionTestJDBC</servlet-name>
+    <servlet-class>bdd.GestionTestJDBC</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+    <servlet-name>GestionTestJDBC</servlet-name>
+    <url-pattern>/testjdbc</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  <servlet-name>Perfil</servlet-name>
+  <servlet-class>bdd.Perfil</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  <servlet-name>Perfil</servlet-name>
+  <url-pattern>/perfil</url-pattern>
+  </servlet-mapping>
 </web-app>
